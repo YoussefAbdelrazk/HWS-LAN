@@ -1,3 +1,12 @@
-export { default as Hero } from "./hero";
-export { default as Navbar } from "./navbar";
-export { default as About } from "./about";
+export { default as Footer } from '../../shared/footer';
+export { default as About } from './about';
+export { default as Banner } from './banner';
+export { default as BannerPlatform } from './bannerPlatform';
+export { default as CertifiedTrainer } from './certified-trainer';
+export { default as Events } from './events';
+export { default as Experience } from './experience';
+export { default as Haswabanner } from './haswabanner';
+export { default as Hero } from './hero';
+export { default as ImpactNumbers } from './impactnumbers';
+export { default as Navbar } from './navbar';
+export { default as News } from './news';

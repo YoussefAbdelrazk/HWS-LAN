@@ -1,4 +1,16 @@
-import { Hero, Navbar, About } from '@/components/features/Home';
+import {
+  About,
+  Banner,
+  BannerPlatform,
+  CertifiedTrainer,
+  Events,
+  Experience,
+  Hero,
+  ImpactNumbers,
+  Haswabanner,
+  Navbar,
+  News,
+} from '@/components/features/Home';
 
 export default function Home() {
   return (
@@ -6,6 +18,14 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <CertifiedTrainer />
+      <Experience />
+      <Banner />
+      <Events />
+      <BannerPlatform />
+      <ImpactNumbers />
+      <Haswabanner />
+      <News />
     </>
   );
 }

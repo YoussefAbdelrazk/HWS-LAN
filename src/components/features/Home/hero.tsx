@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function hero() {
   return (
-    <div
+    <section
       className='bg-cover bg-center bg-no-repeat h-[100vh] min-h-[600px] w-full relative'
       style={{ backgroundImage: 'url(/assets/Hero.png)' }}
     >
@@ -30,8 +30,6 @@ export default function hero() {
             classes, and transform your fitness journey with rhythm and movement.
           </p>
 
-
-
           {/* Certification badge */}
           <div className='bg-black/60 backdrop-blur-lg rounded-2xl px-6 py-4 md:px-8 md:py-6 mt-8 md:mt-12 border border-white/20'>
             <div className='flex flex-col sm:flex-row items-center gap-4 md:gap-6'>
@@ -47,12 +45,8 @@ export default function hero() {
               </p>
             </div>
           </div>
-
-
         </div>
       </div>
-
-     
-    </div>
+    </section>
   );
 }
