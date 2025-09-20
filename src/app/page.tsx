@@ -8,14 +8,14 @@ import {
   Hero,
   ImpactNumbers,
   Haswabanner,
-  Navbar,
+  
   News,
 } from '@/components/features/Home';
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+
       <Hero />
       <About />
       <CertifiedTrainer />
