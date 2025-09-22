@@ -3,7 +3,7 @@ export { default as About } from './about';
 export { default as Banner } from './banner';
 export { default as BannerPlatform } from './bannerPlatform';
 export { default as CertifiedTrainer } from './certified-trainer';
-export { default as Events } from './events';
+export { default as Events } from '../../shared/events';
 export { default as Experience } from './experience';
 export { default as Haswabanner } from './haswabanner';
 export { default as Hero } from './hero';

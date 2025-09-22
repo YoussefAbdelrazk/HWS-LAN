@@ -3,13 +3,14 @@ import {
   Banner,
   BannerPlatform,
   CertifiedTrainer,
-  Events,
+
   Experience,
   Hero,
   ImpactNumbers,
   Haswabanner,
-  
+
   News,
+  Events,
 } from '@/components/features/Home';
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
       <CertifiedTrainer />
       <Experience />
       <Banner />
-      <Events />
+      <Events title='Join The Movement :' text='Hawssaa Events' />
       <BannerPlatform />
       <ImpactNumbers />
       <Haswabanner />

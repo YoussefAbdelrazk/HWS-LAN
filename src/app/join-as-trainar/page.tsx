@@ -1,18 +1,20 @@
-import HeroShared from '@/components/shared/HeroShared'
-import { HawsaTot, FlexibleTraining, Bannerjoin } from '@/components/features/Join-as-trainer'
-import React from 'react'
-import { Team } from '@/components/features/About'
+import { Team } from '@/components/features/About';
+import {
+  Bannerjoin,
+  FlexibleTraining,
+  HawsaTot,
+  Hero,
+} from '@/components/features/Join-as-trainer';
 
 export default function page() {
   return (
     <div>
-      <HeroShared title='Join as a Hawssa Trainer Empower Your Journey, Inspire Millions' image='/assets/Hero.png' />
+      <Hero />
 
       <HawsaTot />
       <FlexibleTraining />
       <Bannerjoin />
-      <Team/>
-
+      <Team />
     </div>
-  )
+  );
 }

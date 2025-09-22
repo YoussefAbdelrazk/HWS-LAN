@@ -29,11 +29,11 @@ export default function impactnumbers() {
       {/* left side */}
       <div className=' relative'>
         <Image
-          src='/assets/about1.png'
+          src='/assets/img.svg'
           alt='impactnumbers'
           width={500}
           height={500}
-          className=' rounded-lg w-full lg:h-[600px] h-[400px] object-cover '
+          className=' rounded-lg w-[800px] lg:h-[600px] h-[400px] object-cover '
         />
         <div className='absolute bg-[#F7F225] rounded p-6 -top-5 -left-6 -z-10 hidden sm:block'></div>
         <div className='absolute bg-[#F7F225] rounded p-6 -bottom-7 -right-5 -z-10 hidden sm:block'></div>
