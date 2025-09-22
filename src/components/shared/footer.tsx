@@ -172,7 +172,7 @@ export default function Footer() {
             <FooterLink href='/about'>About Us</FooterLink>
             <FooterLink href='/events'>Events</FooterLink>
             <FooterLink href='/shop'>Shop</FooterLink>
-            <FooterLink href='/blog'>Blog</FooterLink>
+            <FooterLink href='/take-a-class'>Take a Class</FooterLink>
             <FooterLink href='/contact'>Contact Us</FooterLink>
           </FooterSection>
 

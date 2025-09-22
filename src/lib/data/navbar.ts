@@ -28,8 +28,8 @@ export const navbarItems = [
   },
   {
     id: 6,
-    name: 'Blog',
-    href: '/blog'
+    name: 'Take a Class',
+    href: '/take-a-class'
   },
   {
     id: 7,
