@@ -1,27 +1,30 @@
 import SectionTitle from '@/components/shared/sectionTitle';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-export default function impactnumbers() {
+export default function ImpactNumbers() {
+  const t = useTranslations('impact');
+
   const impactNumbers = [
     {
       number: '500+',
-      title: 'Trainers',
-      text: 'Professional  dance experts',
+      title: t('trainers'),
+      text: t('trainersDescription'),
     },
     {
       number: '10,000+',
-      title: 'Videos',
-      text: 'Step-by-step guided workouts',
+      title: t('videos'),
+      text: t('videosDescription'),
     },
     {
       number: '50,000+',
-      title: 'Hours',
-      text: 'Of training & dance sessions',
+      title: t('hours'),
+      text: t('hoursDescription'),
     },
     {
       number: '100+',
-      title: 'Countries',
-      text: 'Global community',
+      title: t('countries'),
+      text: t('countriesDescription'),
     },
   ];
   return (
@@ -40,10 +43,9 @@ export default function impactnumbers() {
       </div>
       {/* right side */}
       <div className='flex flex-col items-center justify-center space-y-6'>
-        <SectionTitle title='Our' text='Impact in Numbers' />
+        <SectionTitle title={t('title')} text={t('subtitle')} />
         <p className='text-lg max-w-md mx-auto relative pl-6 border-l-4 border-[#F7F225]'>
-          Discover the strength of our global community through trainers, videos, hours, and
-          countries.
+          {t('description')}
         </p>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>

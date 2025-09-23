@@ -1,22 +1,25 @@
 import SectionTitle from '@/components/shared/sectionTitle';
 import { ChevronRight, Play } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 export default function FlexibleTraining() {
+  const t = useTranslations('joinAsTrainer');
+
   const cards = [
     {
-      title: 'Onsite Training',
-      description: 'Join our live in-person sessions and connect with other trainers',
+      title: t('onsiteTraining'),
+      description: t('onsiteDescription'),
       image: '/assets/FlexibleCard1.jpg',
     },
     {
-      title: 'Online Training',
-      description: 'Train from anywhere, interact with students in real time',
+      title: t('onlineTraining'),
+      description: t('onlineDescription'),
       image: '/assets/flexiblecard2.jpg',
     },
     {
-      title: 'Hybrid Training',
-      description: 'Train from anywhere, interact with students in real time',
+      title: t('hybridTraining'),
+      description: t('hybridDescription'),
       image: '/assets/event1.png',
     },
   ];
@@ -24,8 +27,8 @@ export default function FlexibleTraining() {
     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
       {/* Header Section */}
       <div className='text-center mb-12 space-y-4'>
-        <SectionTitle title='Flexible ' text=' Training Ways' />
-        <p>Choose Your Training Path Flexible Options to Fit Your Lifestyle and Grow Your Skills</p>
+        <SectionTitle title={t('flexibleTrainingWays')} text={t('trainingWays')} />
+        <p>{t('chooseTrainingPath')}</p>
       </div>
 
       {/* Training Options Cards */}
@@ -54,7 +57,7 @@ export default function FlexibleTraining() {
             {/* Read More Button */}
             <div className='absolute top-4 right-4'>
               <button className='bg-white/90 text-gray-700 px-3 py-1 rounded-full text-xs font-medium hover:bg-white transition-colors flex items-center gap-1'>
-                Read More Details
+                {t('readMoreDetails')}
                 <ChevronRight className='w-3 h-3' />
               </button>
             </div>

@@ -1,6 +1,8 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-export default function hero() {
+export default function Hero() {
+  const t = useTranslations('hero');
   return (
     <section
       className='bg-cover bg-center bg-no-repeat h-[100vh] min-h-[600px] w-full relative'
@@ -14,20 +16,19 @@ export default function hero() {
         <div className='text-white text-center max-w-7xl flex flex-col items-center justify-center gap-6 md:gap-8'>
           {/* Main heading */}
           <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold italic font-poppins tracking-wide leading-tight'>
-            Move Your Body with{' '}
-            <span className='text-[#F7F225] bg-gradient-to-r from-[#F7F225] to-[#E8CE23] bg-clip-text text-transparent'>
-              Hawssa
+            {t('title')}{' '}
+            <span className='bg-gradient-to-r from-[#F7F225] to-[#E8CE23] bg-clip-text text-transparent'>
+              {t('brandName')}
             </span>
             <br />
             <span className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'>
-              The Global Dance Fitness Experience
+              {t('subtitle')}
             </span>
           </h1>
 
           {/* Description */}
           <p className='text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 max-w-4xl leading-relaxed px-4'>
-            Join millions worldwide in the most energetic dance fitness program. Get certified, find
-            classes, and transform your fitness journey with rhythm and movement.
+            {t('description')}
           </p>
 
           {/* Certification badge */}
@@ -41,7 +42,7 @@ export default function hero() {
                 className='w-10 h-10 md:w-12 md:h-12'
               />
               <p className='text-sm md:text-base lg:text-lg text-gray-200 text-center sm:text-left'>
-                Officially Certified by the International Dance Council (CID-UNESCO)
+                {t('certification')}
               </p>
             </div>
           </div>

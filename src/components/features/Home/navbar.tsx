@@ -1,8 +1,9 @@
 'use client';
 
+import LocaleSwitcher from '@/components/LocaleSwitcher';
 import { Button } from '@/components/ui/button';
-import { navbarItems } from '@/lib/data/navbar';
 import { ChevronRight, Menu, X } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -10,6 +11,18 @@ import { useEffect, useState } from 'react';
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const t = useTranslations('navigation');
+  const tCommon = useTranslations('common');
+
+  const navbarItems = [
+    { id: 1, name: t('home'), href: '/' },
+    { id: 2, name: t('about'), href: '/about' },
+    { id: 3, name: t('joinAsTrainer'), href: '/join-as-trainar' },
+    { id: 4, name: t('events'), href: '/events' },
+    { id: 5, name: t('shop'), href: '/shop' },
+    { id: 6, name: t('takeAClass'), href: '/take-a-class' },
+    { id: 7, name: t('contactUs'), href: '/contact-us' },
+  ];
 
   // Handle scroll effect
   useEffect(() => {
@@ -79,11 +92,12 @@ export default function Navbar() {
 
         {/* Desktop buttons */}
         <div className='hidden lg:flex items-center gap-3 xl:gap-4'>
+          <LocaleSwitcher />
           <Button className='bg-black/30 backdrop-blur-lg px-4 xl:px-6 py-2 xl:py-3 rounded-md border border-white/30 text-sm xl:text-base hover:bg-white/10 transition-all duration-300'>
-            Login
+            {tCommon('login')}
           </Button>
           <Button className='bg-gradient-to-r from-[#F7F225] to-[#E8CE23] text-black px-4 xl:px-6 py-2 xl:py-3 rounded-md text-sm xl:text-base font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300'>
-            Join Now
+            {tCommon('joinNow')}
           </Button>
         </div>
 
@@ -143,7 +157,7 @@ export default function Navbar() {
           </div>
 
           {/* Menu content */}
-          <div className='flex flex-col h-full'>
+          <div className='flex flex-col'>
             {/* Navigation items */}
             <div className='flex-1 px-6 py-8 space-y-2'>
               {navbarItems.map((item, index) => (
@@ -163,19 +177,29 @@ export default function Navbar() {
             </div>
 
             {/* Action buttons */}
-            <div className='p-6 border-t border-white/10 space-y-4'>
-              <Button
-                className='w-full bg-white/10 backdrop-blur-lg px-6 py-4 rounded-xl border border-white/20 text-white hover:bg-white/20 transition-all duration-300 text-base font-medium'
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Login
-              </Button>
-              <Button
-                className='w-full bg-gradient-to-r from-[#F7F225] to-[#E8CE23] text-black px-6 py-4 rounded-xl text-base font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300'
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Join Now
-              </Button>
+            <div className=' border-t border-white/10 space-y-4'>
+              {/* Language Switcher */}
+              <div className='flex justify-center mb-6'>
+                <div className='bg-white/5 backdrop-blur-lg rounded-xl p-2 border border-white/10'>
+                  <LocaleSwitcher />
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className='space-y-3'>
+                <Button
+                  className='w-full bg-white/10 backdrop-blur-lg px-6 py-4 rounded-xl border border-white/20 text-white hover:bg-white/20 transition-all duration-300 text-base font-medium'
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {tCommon('login')}
+                </Button>
+                <Button
+                  className='w-full bg-gradient-to-r from-[#F7F225] to-[#E8CE23] text-black px-6 py-4 rounded-xl text-base font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300'
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {tCommon('joinNow')}
+                </Button>
+              </div>
             </div>
           </div>
         </div>

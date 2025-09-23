@@ -1,15 +1,14 @@
-import SectionTitle from '@/components/shared/sectionTitle'
+import SectionTitle from '@/components/shared/sectionTitle';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 export default function Team() {
+  const t = useTranslations('about');
   return (
     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
       <div className='text-center space-y-4 mb-12'>
-        <SectionTitle title='' text='Our Team… Behind Every Move' />
-        <p className='max-w-xl mx-auto text-[#323232CC]'>
-          Our expert trainers bring passion and energy to every step, delivering an unparalleled
-          dance fitness experience
-        </p>
+        <SectionTitle title='' text={t('ourTeam')} />
+        <p className='max-w-xl mx-auto text-[#323232CC]'>{t('teamDescription')}</p>
       </div>
       <div>
         <Image

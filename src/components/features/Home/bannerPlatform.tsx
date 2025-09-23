@@ -1,7 +1,9 @@
 import AppStoreButtons from '@/components/shared/appStoreButtons';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 export default function BannerPlatform() {
+  const t = useTranslations('platform');
   return (
     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16'>
       <div className='relative'>
@@ -19,7 +21,7 @@ export default function BannerPlatform() {
           {/* Left side - Text Content */}
           <div className='flex flex-col items-center lg:items-start justify-center text-center lg:text-left mb-6 lg:mb-0 lg:flex-1 lg:pr-8'>
             <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold max-w-lg leading-tight'>
-              The ultimate fitness dance experience – energy, rhythm, and results in one app
+              {t('bannerTitle')}
             </h1>
             <div className='mt-6 sm:mt-8'>
               <AppStoreButtons />

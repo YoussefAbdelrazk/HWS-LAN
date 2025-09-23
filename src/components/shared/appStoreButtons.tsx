@@ -1,8 +1,11 @@
+import { useTranslations } from 'next-intl';
+
 interface AppStoreButtonsProps {
   className?: string;
 }
 
 export default function AppStoreButtons({ className = '' }: AppStoreButtonsProps) {
+  const t = useTranslations('platform');
   return (
     <div
       className={`flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center ${className}`}
@@ -35,8 +38,8 @@ export default function AppStoreButtons({ className = '' }: AppStoreButtonsProps
             </svg>
           </div>
           <div className='text-left'>
-            <div className='text-xs text-gray-300 uppercase tracking-wide'>GET IT ON</div>
-            <div className='text-sm font-semibold'>Google Play</div>
+            <div className='text-xs text-gray-300 uppercase tracking-wide'>{t('getItOn')}</div>
+            <div className='text-sm font-semibold'>{t('googlePlay')}</div>
           </div>
         </div>
       </a>
@@ -54,8 +57,10 @@ export default function AppStoreButtons({ className = '' }: AppStoreButtonsProps
             </svg>
           </div>
           <div className='text-left'>
-            <div className='text-xs text-gray-300 uppercase tracking-wide'>DOWNLOAD ON THE</div>
-            <div className='text-sm font-semibold'>App Store</div>
+            <div className='text-xs text-gray-300 uppercase tracking-wide'>
+              {t('downloadOnThe')}
+            </div>
+            <div className='text-sm font-semibold'>{t('appStore')}</div>
           </div>
         </div>
       </a>

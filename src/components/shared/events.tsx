@@ -1,6 +1,7 @@
 import EventCard from '@/components/shared/eventcard';
 import SectionTitle from '@/components/shared/sectionTitle';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from 'next-intl';
 
 const eventsData = [
   {
@@ -29,12 +30,14 @@ const eventsData = [
   },
 ];
 
-export default function Events({title,text}:{title:string,text:string}) {
+export default function Events({ title, text }: { title: string; text: string }) {
+  const t = useTranslations('events');
+
   return (
     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
       <div className='text-center space-y-4 mb-12'>
         <SectionTitle title={title} text={text} />
-        <p className='max-w-xl mx-auto text-[#323232CC]'>Checkout our latest news & events</p>
+        <p className='max-w-xl mx-auto text-[#323232CC]'>{t('upcomingEvents')}</p>
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -51,7 +54,9 @@ export default function Events({title,text}:{title:string,text:string}) {
         ))}
       </div>
       <div className='flex justify-center mt-12'>
-        <Button className='bg-[#F7F225] hover:bg-[#E8CE23] text-black px-8 py-6 text-md font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 border-1 border-[#000000]'>Become a Certified Trainer</Button>
+        <Button className='bg-[#F7F225] hover:bg-[#E8CE23] text-black px-8 py-6 text-md font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 border-1 border-[#000000]'>
+          {t('registerNow')}
+        </Button>
       </div>
     </div>
   );

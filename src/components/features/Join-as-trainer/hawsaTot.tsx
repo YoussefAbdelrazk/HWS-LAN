@@ -1,35 +1,30 @@
 import SectionTitle from '@/components/shared/sectionTitle';
-import Image from 'next/image';
 import { CornerDownRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
-export default function hawsaTot() {
+export default function HawsaTot() {
+  const t = useTranslations('joinAsTrainer');
   return (
     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-4'>
       <div className='flex flex-col gap-4'>
-        <SectionTitle title='What is' text='Hawssa Tot' />
-        <h3 className='text-2xl font-semibold text-[#1C1C1C]'>
-          Hawssa Train of Trainers (TOT) Program
-        </h3>
-        <p className='text-lg max-w-lg text-[#323232CC]'>
-          Our TOT program is designed for passionate fitness and dance professionals who want to
-          expand their impact. By joining, you’ll gain exclusive access to Hawssa’s rich archive of
-          training materials and reach over 1 million users who already trust Hawssa to guide their
-          fitness journey.
-        </p>
+        <SectionTitle title={t('whatIsHawssaTot')} text={t('hawssaTot')} />
+        <h3 className='text-2xl font-semibold text-[#1C1C1C]'>{t('totProgram')}</h3>
+        <p className='text-lg max-w-lg text-[#323232CC]'>{t('totDescription')}</p>
 
         <ul className=' flex flex-col gap-2 text-md text-[#323232CC]'>
           <li className='flex items-center gap-2'>
-          <CornerDownRight className='text-[#F7F225]' />
-          Access to Hawssa’s exclusive trainer archive</li>
-          <li className='flex items-center gap-2'>
-          <CornerDownRight className='text-[#F7F225]' />
-          Visibility to 1M+ trusted clients
+            <CornerDownRight className='text-[#F7F225]' />
+            {t('accessArchive')}
           </li>
           <li className='flex items-center gap-2'>
-          <CornerDownRight className='text-[#F7F225]' />
-          Grow your influence and income
+            <CornerDownRight className='text-[#F7F225]' />
+            {t('visibilityClients')}
           </li>
-
+          <li className='flex items-center gap-2'>
+            <CornerDownRight className='text-[#F7F225]' />
+            {t('growInfluence')}
+          </li>
         </ul>
       </div>
       {/* images */}

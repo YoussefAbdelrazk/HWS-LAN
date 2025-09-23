@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Award, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 interface TrainerCardProps {
@@ -18,6 +19,7 @@ interface TrainerCardProps {
 }
 
 export default function TrainerCard({ trainer }: TrainerCardProps) {
+  const t = useTranslations('classes');
   return (
     <div className='bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden'>
       {/* Trainer Image */}
@@ -34,7 +36,7 @@ export default function TrainerCard({ trainer }: TrainerCardProps) {
         {trainer.isCertified && (
           <div className='absolute top-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full flex items-center gap-1 text-xs font-medium'>
             <Award className='w-3 h-3 text-[#F7F225]' />
-            Certified Trainer
+            {t('certifiedTrainer')}
           </div>
         )}
       </div>
@@ -47,16 +49,20 @@ export default function TrainerCard({ trainer }: TrainerCardProps) {
         {/* Trainer Information */}
         <div className='space-y-3'>
           <h4 className='text-sm font-semibold text-gray-700 uppercase tracking-wide'>
-            Trainer Information
+            {t('trainerInformation')}
           </h4>
           <div className='space-y-2 '>
             <div className='flex items-center gap-3 text-sm text-gray-600'>
               <Phone className='size-8 text-[#F7F225] bg-black p-1.5  rounded-full' />
-              <span>Number: {trainer.phone}</span>
+              <span>
+                {t('number')}: {trainer.phone}
+              </span>
             </div>
             <div className='flex items-center gap-3 text-sm text-gray-600'>
               <MessageCircle className='size-8 text-[#F7F225] bg-black p-1.5  rounded-full' />
-              <span>WhatsApp: {trainer.whatsapp}</span>
+              <span>
+                {t('whatsapp')}: {trainer.whatsapp}
+              </span>
             </div>
           </div>
         </div>
@@ -64,16 +70,20 @@ export default function TrainerCard({ trainer }: TrainerCardProps) {
         {/* Gym Information */}
         <div className='space-y-3'>
           <h4 className='text-sm font-semibold text-gray-700 uppercase tracking-wide'>
-            Gym Information
+            {t('gymInformation')}
           </h4>
           <div className='space-y-2'>
             <div className='flex items-center gap-3 text-sm text-gray-600'>
               <Phone className='size-8 text-black bg-[#F7F225] p-1.5  rounded-full' />
-              <span>Number: {trainer.gymPhone}</span>
+              <span>
+                {t('number')}: {trainer.gymPhone}
+              </span>
             </div>
             <div className='flex items-center gap-3 text-sm text-gray-600'>
               <MessageCircle className='size-8 text-black bg-[#F7F225] p-1.5  rounded-full' />
-              <span>WhatsApp: {trainer.gymWhatsapp}</span>
+              <span>
+                {t('whatsapp')}: {trainer.gymWhatsapp}
+              </span>
             </div>
           </div>
         </div>
@@ -81,7 +91,7 @@ export default function TrainerCard({ trainer }: TrainerCardProps) {
         {/* Available Days */}
         <div className='space-y-3'>
           <h4 className='text-sm font-semibold text-gray-700 uppercase tracking-wide'>
-            Trainer Days
+            {t('trainerDays')}
           </h4>
           <div className='flex flex-wrap gap-2'>
             {trainer.availableDays.map((day, index) => (
@@ -98,7 +108,7 @@ export default function TrainerCard({ trainer }: TrainerCardProps) {
         {/* Book Now Button */}
         <Button className='w-full bg-[#F7F225] hover:bg-[#E8CE23] text-black py-3 text-sm font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2'>
           <MapPin className='w-4 h-4' />
-          Book Now
+          {t('bookNow')}
         </Button>
       </div>
     </div>

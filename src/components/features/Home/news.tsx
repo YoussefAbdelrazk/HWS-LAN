@@ -1,24 +1,27 @@
 'use client';
 import SectionTitle from '@/components/shared/sectionTitle';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
 
 export default function News() {
+  const t = useTranslations('news');
+
   const newsData = [
     {
       id: 1,
-      title: 'New Dance Program Released',
+      title: t('newDanceProgram'),
       image: '/assets/event1.png',
     },
     {
       id: 2,
-      title: 'App Reaches 20 Countries',
+      title: t('appReachesCountries'),
       image: '/assets/event2.png',
     },
     {
       id: 3,
-      title: 'Trainer Live Sessions',
+      title: t('trainerLiveSessions'),
       image: '/assets/event3.png',
     },
   ];
@@ -41,10 +44,9 @@ export default function News() {
       {/* Header Section */}
       <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 gap-6'>
         <div>
-           <SectionTitle title='Hawssa' text='Latest News & Updates' />
-        <p>Checkout our latest news & events</p>
+          <SectionTitle title='Hawssa' text={t('title')} />
+          <p>{t('description')}</p>
         </div>
-
 
         {/* Navigation Arrows */}
         <div className='flex space-x-2'>
@@ -52,7 +54,7 @@ export default function News() {
             onClick={handlePrevious}
             disabled={currentIndex === 0}
             className='w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed rounded-lg flex items-center justify-center transition-colors duration-200'
-            aria-label='Previous news'
+            aria-label={t('previousNews')}
           >
             <svg
               className='w-5 h-5 text-gray-700'
@@ -72,7 +74,7 @@ export default function News() {
             onClick={handleNext}
             disabled={currentIndex >= newsData.length - itemsPerPage}
             className='w-10 h-10 sm:w-12 sm:h-12 bg-[#F7F225] hover:bg-[#E8CE23] disabled:bg-gray-100 disabled:cursor-not-allowed rounded-lg flex items-center justify-center transition-colors duration-200'
-            aria-label='Next news'
+            aria-label={t('nextNews')}
           >
             <svg
               className='w-5 h-5 text-gray-900'
@@ -116,7 +118,7 @@ export default function News() {
       {/* See All News Button */}
       <div className='flex justify-center'>
         <Button className='bg-[#F7F225] hover:bg-[#E8CE23] text-black px-10 py-5 text-lg font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 border-1 border-[#000000]'>
-          See All News
+          {t('seeAllNews')}
         </Button>
       </div>
     </div>

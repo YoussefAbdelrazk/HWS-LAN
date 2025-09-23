@@ -1,4 +1,7 @@
-export default function hero() {
+import { useTranslations } from 'next-intl';
+
+export default function EventsHero() {
+  const t = useTranslations('hero');
   return (
     <section
       className='bg-cover bg-center bg-no-repeat h-[100vh] min-h-[600px] w-full relative'
@@ -11,7 +14,7 @@ export default function hero() {
         <div className='text-white text-center max-w-7xl flex flex-col items-center justify-center gap-6 md:gap-8'>
           {/* Main heading */}
           <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold italic font-poppins tracking-wide leading-tight'>
-          Hawssa Events – Where <span className='text-[#F7F225]'>Fitness Meets Fun</span>, Family, Community
+            {t('eventsTitle')} <span className='text-[#F7F225]'>{t('eventsSubtitle')}</span>
           </h1>
         </div>
       </div>

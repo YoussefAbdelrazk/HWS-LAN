@@ -1,9 +1,11 @@
 import SectionTitle from '@/components/shared/sectionTitle';
 import { trainersData } from '@/lib/data/trainers';
 import { Crown } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import TrainerCard from './trainer-card';
 
 export default function PremiumTrainers() {
+  const t = useTranslations('classes');
   return (
     <div className='bg-gradient-to-br from-yellow-50 py-16'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -12,19 +14,14 @@ export default function PremiumTrainers() {
           <div className='inline-flex items-center gap-2 bg-[#F7F225] px-6 py-3 rounded-full mb-8'>
             <Crown className='w-5 h-5 text-gray-700' />
             <span className='text-gray-700 font-bold text-sm uppercase tracking-wide'>
-              Premium Trainers
+              {t('premiumTrainers')}
             </span>
           </div>
 
           {/* Section Title */}
-          <SectionTitle
-            title='Train with the Best'
-            text=': Certified and Trusted'
-          />
+          <SectionTitle title={t('trainWithBest')} text={t('certifiedAndTrusted')} />
 
-          <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-            A unique fitness experience that combines dance, culture, and global recognition
-          </p>
+          <p className='text-lg text-gray-600 max-w-3xl mx-auto'>{t('premiumDescription')}</p>
         </div>
 
         {/* Trainers Grid */}
