@@ -10,7 +10,7 @@ export default function FlexibleTraining() {
     {
       title: t('onsiteTraining'),
       description: t('onsiteDescription'),
-      image: '/assets/FlexibleCard1.jpg',
+      image: '/assets/flexiblecard1.jpg',
     },
     {
       title: t('onlineTraining'),
