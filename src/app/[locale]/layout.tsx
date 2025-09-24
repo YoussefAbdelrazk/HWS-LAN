@@ -1,10 +1,10 @@
 import { Footer, Navbar } from '@/components/features/Home';
 import { routing } from '@/i18n/routing';
+import { PageTransition } from '@/lib/animations';
 import type { Metadata } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { Geist, Geist_Mono, Poppins } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import { PageTransition } from '@/lib/animations';
 import './globals.css';
 
 const geistSans = Geist({

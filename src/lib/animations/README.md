@@ -47,9 +47,9 @@ import { Animate, TextReveal, StaggerContainer, HoverAnimation } from '@/lib/ani
 The main animation wrapper component.
 
 ```tsx
-<Animate 
-  variant="fadeInUp" 
-  delay={0.2} 
+<Animate
+  variant="fadeInUp"
+  delay={0.2}
   duration={0.6}
   trigger="scroll"
   threshold={0.1}
