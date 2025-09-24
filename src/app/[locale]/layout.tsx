@@ -22,18 +22,20 @@ const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
-// const hanson = localFont({
-//   src: './fonts/Hanson.woff2',
-//   variable: '--font-hanson',
-//   display: 'swap',
-// });
+// generateStaticParams is a function that generates the static params for the layout component
 export function generateStaticParams() {
   return routing.locales.map((locale: string) => ({ locale }));
 }
+
 export const metadata: Metadata = {
   title: 'Hawssa Dance Fitness - The Global Dance Fitness Experience',
   description:
     'Join millions worldwide in the most energetic dance fitness program. Get certified, find classes, and transform your fitness journey with rhythm and movement.',
+  openGraph: {
+    title: 'Hawssa Dance Fitness - The Global Dance Fitness Experience',
+    description:
+      'Join millions worldwide in the most energetic dance fitness program. Get certified, find classes, and transform your fitness journey with rhythm and movement.',
+  },
 };
 
 export default async function RootLayout({
