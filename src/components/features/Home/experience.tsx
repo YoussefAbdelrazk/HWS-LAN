@@ -1,5 +1,6 @@
 import ExperienceCard from '@/components/shared/experiencecard';
 import SectionTitle from '@/components/shared/sectionTitle';
+import { Animate, HoverAnimation, StaggerContainer, StaggerItem } from '@/lib/animations';
 import { useTranslations } from 'next-intl';
 
 export default function Experience() {
@@ -37,21 +38,28 @@ export default function Experience() {
   ];
   return (
     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-      <div className='text-center space-y-4 mb-12'>
-        <SectionTitle title={t('title')} text={t('subtitle')} />
-        <p className='max-w-xl mx-auto text-[#323232CC]'>{t('description')}</p>
-      </div>
+      <Animate variant='fadeInUp' delay={0.2}>
+        <div className='text-center space-y-4 mb-12'>
+          <SectionTitle title={t('title')} text={t('subtitle')} />
+          <p className='max-w-xl mx-auto text-[#323232CC]'>{t('description')}</p>
+        </div>
+      </Animate>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-        {experienceData.map((item, index) => (
-          <ExperienceCard
-            key={index}
-            icon={item.icon}
-            title={item.title}
-            description={item.description}
-          />
-        ))}
-      </div>
+      <StaggerContainer delay={0.1}>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {experienceData.map((item, index) => (
+            <StaggerItem key={index}>
+              <HoverAnimation type='lift'>
+                <ExperienceCard
+                  icon={item.icon}
+                  title={item.title}
+                  description={item.description}
+                />
+              </HoverAnimation>
+            </StaggerItem>
+          ))}
+        </div>
+      </StaggerContainer>
     </div>
   );
 }

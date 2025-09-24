@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { Geist, Geist_Mono, Poppins } from 'next/font/google';
 import { notFound } from 'next/navigation';
+import { PageTransition } from '@/lib/animations';
 import './globals.css';
 
 const geistSans = Geist({
@@ -60,7 +61,9 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider>
           <Navbar />
-          {children}
+          <PageTransition>
+            {children}
+          </PageTransition>
           <Footer />
         </NextIntlClientProvider>
       </body>
