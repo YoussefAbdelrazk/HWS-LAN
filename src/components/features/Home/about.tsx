@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section className='py-16 md:py-20 lg:py-24 bg-gray-50 relative overflow-hidden'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-        <div className='grid lg:grid-cols-2 gap-12 lg:gap-16 items-center'>
+        <div className='grid lg:grid-cols-2 gap-12 lg:gap-16 items-center place-items-center'>
           {/* Left Side - Content */}
           <Animate variant='fadeInLeft' delay={0.2} className='space-y-8'>
             {/* Main Heading */}
@@ -89,7 +89,7 @@ export default function About() {
             {/* Top Image */}
             {locale === 'ar' && (
               <ImageReveal delay={0.8}>
-                <div className='relative top-10 z-30 md:-top-20 md:right-50'>
+                <div className='relative top-12 z-30 md:-top-20 md:right-50'>
                   <div className='relative rounded overflow-hidden'>
                     <Image
                       src='/assets/About1.png'
@@ -119,7 +119,7 @@ export default function About() {
             )}
             {locale === 'en' && (
               <ImageReveal delay={0.8}>
-                <div className='relative top-10 z-30 md:-top-20 md:left-50'>
+                <div className='relative top-12 z-30 md:-top-20 md:left-50'>
                   <div className='relative rounded overflow-hidden'>
                     <Image
                       src='/assets/About1.png'

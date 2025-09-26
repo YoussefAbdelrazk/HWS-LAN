@@ -10,7 +10,7 @@ export default function BannerPlatform() {
       <div className='relative'>
         <ImageReveal>
           <Image
-            src='/assets/bannerPlatform.png'
+            src='/assets/imageupdated.jpg'
             alt='Hawssa App Platform Banner'
             width={1200}
             height={600}
