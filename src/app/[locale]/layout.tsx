@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     description:
       'Join millions worldwide in the most energetic dance fitness program. Get certified, find classes, and transform your fitness journey with rhythm and movement.',
   },
+  icons: {
+    icon: '/assets/logo.png',
+  },
 };
 
 export default async function RootLayout({
