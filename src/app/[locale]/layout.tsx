@@ -3,7 +3,7 @@ import { routing } from '@/i18n/routing';
 import { PageTransition } from '@/lib/animations';
 import type { Metadata } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { Geist, Geist_Mono, Poppins } from 'next/font/google';
+import { Cairo, Geist, Geist_Mono, Poppins } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import './globals.css';
 
@@ -21,6 +21,12 @@ const poppins = Poppins({
   variable: '--font-poppins',
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
+
+const cairo = Cairo({
+  variable: '--font-cairo',
+  subsets: ['arabic', 'latin'],
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 // generateStaticParams is a function that generates the static params for the layout component
@@ -58,15 +64,13 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased ${
-          isRTL ? 'rtl' : 'ltr'
-        }`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${
+          cairo.variable
+        } antialiased ${isRTL ? 'rtl' : 'ltr'}`}
       >
         <NextIntlClientProvider>
           <Navbar />
-          <PageTransition>
-            {children}
-          </PageTransition>
+          <PageTransition>{children}</PageTransition>
           <Footer />
         </NextIntlClientProvider>
       </body>
