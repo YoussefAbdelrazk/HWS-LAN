@@ -3,6 +3,7 @@ import { routing } from '@/i18n/routing';
 import { PageTransition } from '@/lib/animations';
 import type { Metadata } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Cairo, Geist, Geist_Mono, Poppins } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import './globals.css';
@@ -34,19 +35,26 @@ export function generateStaticParams() {
   return routing.locales.map((locale: string) => ({ locale }));
 }
 
-export const metadata: Metadata = {
-  title: 'Hawssa Dance Fitness - The Global Dance Fitness Experience',
-  description:
-    'Join millions worldwide in the most energetic dance fitness program. Get certified, find classes, and transform your fitness journey with rhythm and movement.',
-  openGraph: {
-    title: 'Hawssa Dance Fitness - The Global Dance Fitness Experience',
-    description:
-      'Join millions worldwide in the most energetic dance fitness program. Get certified, find classes, and transform your fitness journey with rhythm and movement.',
-  },
-  icons: {
-    icon: '/assets/logo.png',
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'seo.home' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+    },
+    icons: {
+      icon: '/assets/logo.png',
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
