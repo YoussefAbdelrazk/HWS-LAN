@@ -43,7 +43,7 @@
     "brandName": "Hawssa",
     "founder": "Captain Sherif",
     "introduction": "Founded by the visionary Captain Sherif, Hawssa Dance Fitness has revolutionized the way people experience fitness through dance.",
-    "description": "HAWSSA® is a mentor program guided by amazing and professional trainers; we focus on easy but effective steps, fun and trending music and as a plus we breakdown each choreography for easy learning. Our target is to enlarge HAWSSA family, so we accept all ages, sizes, shapes, not matter where you are from or how you look. We are here to dance with you while you get fit.",
+    "description": "H A W S S A is a certified sports dance program that draws its movements from Eastern rhythms, basic fitness, and hip hop. The program is internationally certified by N A S E M (National Institute of Sports Science) and A F A A (American Fitness Academy). Today, the program includes more than 350 certified trainers and schools in 12 countries around the world.",
     "additionalDescription": "Our target is to enlarge HAWSSA family, so we accept all ages, sizes, shapes, not matter where you are from or how you look. We are here to dance with you while you get fit.",
     "becomeTrainer": "Become a Certified Trainer",
     "aboutCaptain": "About Captain Sherif",
@@ -52,7 +52,28 @@
     "visionTitle": "To inspire people worldwide to move, connect, and transform through dance fitness",
     "visionDescription": "HAWSSA® is a fun, fitness dance to keep fit. It is designed for all people from different ages who are looking for a happy fit hour. As long as we can conquer your heart and make you move your feet, you are ready to become part of HAWSSA® family.",
     "ourTeam": "Our Team… Behind Every Move",
-    "teamDescription": "Our expert trainers bring passion and energy to every step, delivering an unparalleled dance fitness experience"
+    "teamDescription": "Our expert trainers bring passion and energy to every step, delivering an unparalleled dance fitness experience",
+    "forPractitioners": {
+      "title": "For Regular Citizens (Practitioners)",
+      "description": "H A W S S A transforms exercise into fun. It helps burn calories, tone the body, and improve mood. Suitable for all levels (beginner or professional). It gives people the opportunity to participate in sports parties and fun trips instead of routine exercise."
+    },
+    "forTrainers": {
+      "title": "For Trainers",
+      "description": "Opportunity to offer new and different classes in gyms. Professional distinction because H A W S S A is an Arab global program. Expansion in job opportunities, especially in Arab countries where there is great demand for programs that combine fun and sports. Obtaining certified certificates that enhance their status. Joining a network of Arab and international trainers with continuous support and updated content."
+    },
+    "forArabCommunity": {
+      "title": "For Arab Citizens in Sports",
+      "description": "H A W S S A is the first Arab-origin fitness program that competes globally. It combines our Eastern culture with modern fitness. It presents a unique model that makes the Arab citizen proud to exercise or train in a global sports program \"Made in the Arab World\"."
+    },
+    "certifications": {
+      "title": "International Certifications",
+      "naseem": "N A S E M (National Institute of Sports Science)",
+      "afaa": "A F A A (American Fitness Academy)"
+    },
+    "globalReach": {
+      "title": "Global Reach",
+      "description": "More than 350 certified trainers and schools in 12 countries around the world"
+    }
   },
   "footer": {
     "findUsOn": "Find Us On",

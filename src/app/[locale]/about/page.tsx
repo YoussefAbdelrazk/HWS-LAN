@@ -1,5 +1,6 @@
 import {
   About as AboutComponent,
+  AboutDetails,
   AboutHero,
   Experience,
   Haswabanner,
@@ -17,6 +18,7 @@ export default function About({ params }: { params: Promise<{ locale: string }> 
   return (
     <>
       <AboutHero />
+      <AboutDetails />
       <AboutComponent />
       <Experience />
       <OurVision />
