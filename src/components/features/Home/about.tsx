@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Animate, HoverAnimation, ImageReveal, TextReveal } from '@/lib/animations';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function About() {
   const t = useTranslations('about');
@@ -53,7 +54,8 @@ export default function About() {
               <div className='flex flex-col sm:flex-row gap-4 pt-4'>
                 <HoverAnimation type='scale'>
                   <Button className='bg-[#F7F225] hover:bg-[#E8CE23] text-black px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300'>
-                    {t('becomeTrainer')}
+                    <Link href='https://hws-panel.vercel.app/signup'>
+                    {t('becomeTrainer')}</Link>
                   </Button>
                 </HoverAnimation>
                 <HoverAnimation type='scale'>
@@ -61,7 +63,8 @@ export default function About() {
                     variant='outline'
                     className='border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300'
                   >
-                    {t('aboutCaptain')}
+                    <Link href='/about'>
+                    {t('aboutCaptain')}</Link>
                   </Button>
                 </HoverAnimation>
               </div>

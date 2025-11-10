@@ -9,6 +9,8 @@ export default function Bannerjoin() {
         buttonText='Register as a Trainer'
         buttonText2='Have an Account?'
         image='/assets/banner.png'
+        buttonLink='https://hws-panel.vercel.app/signup'
+        buttonLink2='https://hws-panel.vercel.app/login'
       />
     </div>
   );

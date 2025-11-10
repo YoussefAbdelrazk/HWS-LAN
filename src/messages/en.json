@@ -296,7 +296,13 @@
     "pageNotFound": "Page Not Found",
     "somethingWentWrong": "Something went wrong",
     "tryAgain": "Try Again",
-    "goHome": "Go Home"
+    "goHome": "Go Home",
+    "oops": "Oops!",
+    "lostInDance": "Looks like you're lost in the dance!",
+    "pageDoesntExist": "This page doesn't exist or has moved.",
+    "letsGetYouBack": "Let's get you back on track",
+    "backToHome": "Back to Home",
+    "exploreClasses": "Explore Classes"
   },
   "seo": {
     "home": {

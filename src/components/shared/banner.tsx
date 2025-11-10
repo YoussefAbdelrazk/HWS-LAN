@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function banner({
   title,
@@ -7,12 +8,16 @@ export default function banner({
   buttonText,
   buttonText2,
   image,
+  buttonLink,
+  buttonLink2,
 }: {
   title: string;
   subtitle: string;
   buttonText: string;
   buttonText2: string;
   image: string;
+  buttonLink: string;
+  buttonLink2: string;
 }) {
   return (
     <div className='max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20'>
@@ -34,11 +39,13 @@ export default function banner({
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 items-center w-full max-w-2xl'>
             <Button className='bg-[#F7F225] hover:bg-[#E8CE23] text-black px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-md font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 border-2 border-[#000000] w-full sm:w-auto'>
-              {buttonText}
+              <Link href={buttonLink}>{buttonText}</Link>
             </Button>
-            <Button className='border-2 border-white text-white hover:text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-md font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto'>
-              {buttonText2}
+            {buttonText2 && (
+              <Button className='border-2 border-white text-white hover:text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-md font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto'>
+              <Link href={buttonLink2}>{buttonText2}</Link>
             </Button>
+            )}
           </div>
         </div>
       </div>

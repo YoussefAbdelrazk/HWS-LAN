@@ -31,10 +31,10 @@ export default function TakeAClassContent() {
       {results && <TrainerResults results={results} loading={loading} />}
 
       {/* Premium Trainers Section - Only show if no search results */}
-      {!results && <PremiumTrainers />}
+      {/* {!results && <PremiumTrainers />} */}
 
       {/* Dedicatated Trainers Section - Only show if no search results */}
-      {!results && <DedicatatedTrainers />}
+      {/* {!results && <DedicatatedTrainers />} */}
 
       <ImpactNumbers />
       <Experience />

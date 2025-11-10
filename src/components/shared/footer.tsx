@@ -174,18 +174,18 @@ export default function Footer() {
             <FooterLink href='/'>Home</FooterLink>
             <FooterLink href='/about'>About Us</FooterLink>
             <FooterLink href='/events'>Events</FooterLink>
-            <FooterLink href='/shop'>Shop</FooterLink>
+
             <FooterLink href='/take-a-class'>Take a Class</FooterLink>
-            <FooterLink href='/contact'>Contact Us</FooterLink>
+
           </FooterSection>
 
           {/* Teach a Class */}
-          <FooterSection title={t('teachAClass')}>
+          {/* <FooterSection title={t('teachAClass')}>
             <FooterLink href='/become-instructor'>{t('becomeInstructor')}</FooterLink>
             <FooterLink href='/self-paced-training'>{t('selfPacedTraining')}</FooterLink>
             <FooterLink href='/attend-training'>{t('attendTraining')}</FooterLink>
             <FooterLink href='/host-training'>{t('hostTraining')}</FooterLink>
-          </FooterSection>
+          </FooterSection> */}
 
           {/* Proudly Certified by */}
           <FooterSection title={t('proudlyCertifiedBy')} titleColor='yellow'>

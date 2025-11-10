@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function AboutDetails() {
   const t = useTranslations('about');
@@ -47,10 +48,8 @@ export default function AboutDetails() {
         {/* For Practitioners */}
         <div className='bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300'>
           <div className='text-center mb-6'>
-            <div className='w-16 h-16 bg-[#F7F225] rounded-full flex items-center justify-center mx-auto mb-4'>
-              <span className='text-2xl font-bold text-white'>👥</span>
-            </div>
-            <h3 className='text-xl font-bold text-[#F7F225]'>{t('forPractitioners.title')}</h3>
+
+            <h3 className='text-xl font-bold text-yellow-600'>{t('forPractitioners.title')}</h3>
           </div>
           <p className='text-[#323232CC] leading-relaxed'>{t('forPractitioners.description')}</p>
         </div>
@@ -58,9 +57,7 @@ export default function AboutDetails() {
         {/* For Trainers */}
         <div className='bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300'>
           <div className='text-center mb-6'>
-            <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-              <span className='text-2xl font-bold text-white'>🏋️</span>
-            </div>
+
             <h3 className='text-xl font-bold text-blue-600'>{t('forTrainers.title')}</h3>
           </div>
           <p className='text-[#323232CC] leading-relaxed'>{t('forTrainers.description')}</p>
@@ -69,9 +66,7 @@ export default function AboutDetails() {
         {/* For Arab Community */}
         <div className='bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300'>
           <div className='text-center mb-6'>
-            <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-              <span className='text-2xl font-bold text-white'>🌍</span>
-            </div>
+
             <h3 className='text-xl font-bold text-green-600'>{t('forArabCommunity.title')}</h3>
           </div>
           <p className='text-[#323232CC] leading-relaxed'>{t('forArabCommunity.description')}</p>
@@ -81,7 +76,7 @@ export default function AboutDetails() {
       {/* Call to Action */}
       <div className='text-center'>
         <button className='bg-gradient-to-r from-[#F7F225] to-yellow-400 text-black font-bold py-4 px-8 rounded-full text-lg hover:from-yellow-400 hover:to-[#F7F225] transition-all duration-300 transform hover:scale-105'>
-          {t('becomeTrainer')}
+          <Link href='https://hws-panel.vercel.app/signup'>{t('becomeTrainer')}</Link>
         </button>
       </div>
     </div>

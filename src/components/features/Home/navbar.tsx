@@ -97,7 +97,7 @@ export default function Navbar() {
             {tCommon('login')}
           </Button> */}
           <Button className='bg-gradient-to-r from-[#F7F225] to-[#E8CE23] text-black px-4 xl:px-6 py-2 xl:py-3 rounded-md text-sm xl:text-base font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300'>
-            {tCommon('joinNow')}
+            <Link href='https://hws-panel.vercel.app/signup'>{tCommon('joinNow')}</Link>
           </Button>
         </div>
 

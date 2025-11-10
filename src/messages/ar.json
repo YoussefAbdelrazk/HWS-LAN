@@ -296,7 +296,13 @@
     "pageNotFound": "الصفحة غير موجودة",
     "somethingWentWrong": "حدث خطأ ما",
     "tryAgain": "حاول مرة أخرى",
-    "goHome": "اذهب للرئيسية"
+    "goHome": "اذهب للرئيسية",
+    "oops": "عذراً!",
+    "lostInDance": "يبدو أنك تائه في الرقص!",
+    "pageDoesntExist": "هذه الصفحة غير موجودة أو تم نقلها.",
+    "letsGetYouBack": "دعنا نعيدك إلى المسار الصحيح",
+    "backToHome": "العودة للرئيسية",
+    "exploreClasses": "استكشف الحصص"
   },
   "seo": {
     "home": {

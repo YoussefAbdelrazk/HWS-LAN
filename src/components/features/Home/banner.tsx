@@ -22,14 +22,14 @@ export default function Banner() {
             <p className='text-sm sm:text-base lg:text-lg max-w-4xl leading-relaxed'>
               {t('description')}
             </p>
-            <div className='flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 items-center w-full max-w-2xl'>
+            {/* <div className='flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 items-center w-full max-w-2xl'>
               <Button className='bg-[#F7F225] hover:bg-[#E8CE23] text-black px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-md font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 border-2 border-[#000000] w-full sm:w-auto'>
                 {t('findClassNearYou')}
               </Button>
               <Button className='border-2 border-white text-white hover:text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-md font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto'>
                 {t('bookOnlineSession')}
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

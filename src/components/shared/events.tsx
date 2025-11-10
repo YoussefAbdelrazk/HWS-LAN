@@ -3,6 +3,7 @@ import SectionTitle from '@/components/shared/sectionTitle';
 import { Button } from '@/components/ui/button';
 import { Animate, HoverAnimation, StaggerContainer, StaggerItem } from '@/lib/animations';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 const eventsData = [
   {
@@ -66,7 +67,7 @@ export default function Events({ title, text }: { title: string; text: string })
         <div className='flex justify-center mt-12'>
           <HoverAnimation type='scale'>
             <Button className='bg-[#F7F225] hover:bg-[#E8CE23] text-black px-8 py-6 text-md font-semibold rounded-lg hover:shadow-lg transition-all duration-300 border-1 border-[#000000]'>
-              {t('registerNow')}
+              <Link href='https://hws-panel.vercel.app/signup'>{t('registerNow')}</Link>
             </Button>
           </HoverAnimation>
         </div>
