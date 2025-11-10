@@ -1,10 +1,4 @@
-import { Experience, ImpactNumbers } from '@/components/features/Home';
-import {
-  DedicatatedTrainers,
-  HeroSection,
-  PremiumTrainers,
-  TrainerSearch,
-} from '@/components/features/Take-a-class';
+import TakeAClassContent from '@/components/features/Take-a-class/take-a-class-content';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { use } from 'react';
@@ -27,26 +21,9 @@ export async function generateMetadata({
   };
 }
 
-export default function TakeAClassPage({ params }: { params: Promise<{ locale: string }> }  ) {
+export default function TakeAClassPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = use(params);
   setRequestLocale(locale);
 
-  return (
-    <div className='min-h-screen'>
-      {/* Hero Section with Search */}
-      <HeroSection />
-
-      {/* Trainer Search/Filter Section */}
-      <TrainerSearch />
-
-      {/* Premium Trainers Section */}
-      <PremiumTrainers />
-
-      {/* Dedicatated Trainers Section */}
-      <DedicatatedTrainers />
-
-      <ImpactNumbers />
-      <Experience />
-    </div>
-  );
+  return <TakeAClassContent />;
 }

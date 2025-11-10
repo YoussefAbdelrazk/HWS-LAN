@@ -19,9 +19,9 @@ export default function Navbar() {
     { id: 2, name: t('about'), href: '/about' },
     { id: 3, name: t('joinAsTrainer'), href: '/join-as-trainar' },
     { id: 4, name: t('events'), href: '/events' },
-    { id: 5, name: t('shop'), href: '/shop' },
+    // { id: 5, name: t('shop'), href: '/shop' },
     { id: 6, name: t('takeAClass'), href: '/take-a-class' },
-    { id: 7, name: t('contactUs'), href: '/contact-us' },
+    // { id: 7, name: t('contactUs'), href: '/contact-us' },
   ];
 
   // Handle scroll effect
@@ -93,9 +93,9 @@ export default function Navbar() {
         {/* Desktop buttons */}
         <div className='hidden lg:flex items-center gap-3 xl:gap-4'>
           <LocaleSwitcher />
-          <Button className='bg-black/30 backdrop-blur-lg px-4 xl:px-6 py-2 xl:py-3 rounded-md border border-white/30 text-sm xl:text-base hover:bg-white/10 transition-all duration-300'>
+          {/* <Button className='bg-black/30 backdrop-blur-lg px-4 xl:px-6 py-2 xl:py-3 rounded-md border border-white/30 text-sm xl:text-base hover:bg-white/10 transition-all duration-300'>
             {tCommon('login')}
-          </Button>
+          </Button> */}
           <Button className='bg-gradient-to-r from-[#F7F225] to-[#E8CE23] text-black px-4 xl:px-6 py-2 xl:py-3 rounded-md text-sm xl:text-base font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300'>
             {tCommon('joinNow')}
           </Button>
@@ -187,12 +187,12 @@ export default function Navbar() {
 
               {/* Action Buttons */}
               <div className='space-y-3'>
-                <Button
+                {/* <Button
                   className='w-full bg-white/10 backdrop-blur-lg px-6 py-4 rounded-xl border border-white/20 text-white hover:bg-white/20 transition-all duration-300 text-base font-medium'
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {tCommon('login')}
-                </Button>
+                </Button> */}
                 <Button
                   className='w-full bg-gradient-to-r from-[#F7F225] to-[#E8CE23] text-black px-6 py-4 rounded-xl text-base font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300'
                   onClick={() => setIsMenuOpen(false)}
